@@ -1,6 +1,7 @@
-/* Main.module.scss */
+/* ScrollEvent.module.scss */
 .wrapper {
-    overflow-x: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .topSpace, .bottomSpace {
@@ -12,14 +13,16 @@
 }
 
 .scrollWrapper {
-    overflow: hidden; // 가로 스크롤 방지
+    display: block;
+    width: 100%;
+    overflow: hidden;
 }
 
 .pinSection {
     width: 100%;
     height: 100vh;
-    color: white;
     position: relative;
+
     .leftSection {
         width: 100%;
         height: 100%;
@@ -34,5 +37,6 @@
         position: absolute;
         top: 0;
         right: 0;
+        will-change: width, border-radius;
     }
 }

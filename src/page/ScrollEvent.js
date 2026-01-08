@@ -15,8 +15,8 @@ const ScrollEvent = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: triggerRef.current,
-                start: "top 0",      // 트리거 상단이 화면 상단에 닿을 때 시작
-                end: "+=4000",         // 4000px만큼 스크롤 하는 동안 진행
+                start: "top top",      // 트리거 상단이 화면 상단에 닿을 때 시작
+                end: "+=3500",         // 3500px만큼 스크롤 하는 동안 진행
                 scrub: 1,              // 스크롤 속도에 동기화
                 pin: true,             // 부모 컨테이너만 고정!!
                 anticipatePin: 1,
@@ -24,8 +24,7 @@ const ScrollEvent = () => {
         });
         
         // 동시에 실행될 애니메이션들
-        tl.to({}, { duration: 0.2 })
-            .to(rightSectionRef.current, { width: "100%", ease: "none", duration: 0.5 })
+        tl.to(rightSectionRef.current, { width: "100%", ease: "none", duration: 0.7 })
             .to({}, { duration: 0.3 });
 
         return () => {
@@ -36,8 +35,6 @@ const ScrollEvent = () => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.topSpace}>스크롤을 내려보세요</div>
-            
             {/* 고정될 영역을 감싸는 컨테이너 */}
             <div ref={triggerRef} className={styles.scrollWrapper}>
                 <div className={styles.pinSection}>
