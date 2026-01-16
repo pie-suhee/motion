@@ -11,6 +11,9 @@ const Main = () => {
                 <Link to="/scrollevent" class={styles.link}>
                     스크롤 이벤트
                 </Link>
+                <Link to="/scrollevent2" class={styles.link}>
+                    스크롤 이벤트 2
+                </Link>
             </section>
         </main>
     );

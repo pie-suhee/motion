@@ -1,7 +1,10 @@
 /* ScrollEvent.module.scss */
 .wrapper {
     width: 100%;
+    padding: 10px;
+    background-color: pink;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .topSpace, .bottomSpace {
