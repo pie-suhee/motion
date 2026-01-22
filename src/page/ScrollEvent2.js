@@ -15,17 +15,17 @@ const ScrollEvent2 = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top top",
-                end: "+=1500",
-                scrub: 1,
-                pin: true,
+                start: "top top",      // 트리거 상단이 화면 상단에 닿을 때 시작
+                end: "+=3500",         // 3500px만큼 스크롤 하는 동안 진행
+                scrub: 1,              // 스크롤 속도에 동기화
+                pin: true,             // 부모 컨테이너만 고정!!
                 anticipatePin: 1,
-                // markers: true,
             }
         });
         
         // 동시에 실행될 애니메이션들
-        tl.to(boxRef.current, { width: "100%", ease: "none", duration: 1 });
+        tl.to(boxRef.current, { width: "100%", height: "100%", ease: "none", duration: 0.7 })
+            .to({}, { duration: 0.3 });
 
         return () => {
             // 모든 ScrollTrigger 제거
