@@ -1,0 +1,29 @@
+$item-colors: #141519, #4B4C50, #BDBEC0, #EEEEEE;
+
+
+.hoverSection {
+    width: 100%;
+    max-width: 370px;
+    height: 682px;
+    margin: 50px auto 0;
+    border-radius: 1.5rem 1.5rem;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+
+    .item {
+        width: 100%;
+        border-radius: 1.5rem 1.5rem 0 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        
+        @for $i from 1 through 4 {
+            &.item#{$i} {
+                height: 100% - (20% * ($i - 1));
+                background-color: nth($item-colors, $i);
+                z-index: $i;
+            }
+        }
+    }
+}
