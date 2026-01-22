@@ -8,26 +8,26 @@ const HoverEvent = () => {
     const { contextSafe } = useGSAP({ scope: container });
 
     const handleItem1Enter = contextSafe(() => {
-        gsap.to(`.${styles.item2}`, { height: '20%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(`.${styles.item3}`, { height: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item2}`, { height: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item3}`, { height: '10%', duration: 0.5, ease: 'power2.out' });
         gsap.to(`.${styles.item4}`, { height: '10%', duration: 0.5, ease: 'power2.out' });
     });
 
     const handleItem2Enter = contextSafe(() => {
-        gsap.to(`.${styles.item2}`, { height: '95%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(`.${styles.item3}`, { height: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item2}`, { height: '90%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item3}`, { height: '10%', duration: 0.5, ease: 'power2.out' });
         gsap.to(`.${styles.item4}`, { height: '10%', duration: 0.5, ease: 'power2.out' });
     });
 
     const handleItem3Enter = contextSafe(() => {
-        gsap.to(`.${styles.item2}`, { height: '95%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(`.${styles.item3}`, { height: '90%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item2}`, { height: '90%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item3}`, { height: '85%', duration: 0.5, ease: 'power2.out' });
         gsap.to(`.${styles.item4}`, { height: '10%', duration: 0.5, ease: 'power2.out' });
     });
 
     const handleItem4Enter = contextSafe(() => {
-        gsap.to(`.${styles.item2}`, { height: '95%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(`.${styles.item3}`, { height: '90%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item2}`, { height: '90%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(`.${styles.item3}`, { height: '85%', duration: 0.5, ease: 'power2.out' });
         gsap.to(`.${styles.item4}`, { height: '85%', duration: 0.5, ease: 'power2.out' });
     });
 
