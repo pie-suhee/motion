@@ -25,5 +25,16 @@ $item-colors: #141519, #4B4C50, #BDBEC0, #EEEEEE;
                 z-index: $i;
             }
         }
+
+        .bar {
+            width: 30%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
